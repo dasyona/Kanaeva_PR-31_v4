@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">KanaevaDM_PR-31_04</string>
+    <string name="appname">Геометрический калькулятор</string>
+    <string name="text_Login">Введите логин</string>
+    <string name="text_Pass">Введите пароль</string>
+    <string name="Regist">Регистрация</string>
+    <string name="back">назад</string>
+    <string name="Vibor">выбор фигуры</string>
+    <string name="picshape">изображение фигуры</string>
+    <string name="formula">p = 2a + b</string>
+    <string name="A">Введите a (сторона)</string>
+    <string name="B">Введите b (сторона)</string>
+    <string name="P">Введите p (периметр)</string>
+    <string name="ras">расчет</string>
+</resources>

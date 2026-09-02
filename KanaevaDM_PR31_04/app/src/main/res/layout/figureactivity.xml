@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/blue">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Vibor"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <!-- Spinner для выбора фигуры -->
+    <Spinner
+        android:id="@+id/figureSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <!-- Изображение фигуры -->
+    <ImageView
+        android:id="@+id/figureImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/triangle"
+    app:layout_constraintTop_toBottomOf="@+id/figureSpinner"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginTop="24dp"
+    android:contentDescription="@string/picshape" />
+
+    <!-- Формула -->
+    <TextView
+        android:id="@+id/formulaTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/formula"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/figureImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Контейнер для полей ввода (будем добавлять/убирать) -->
+    <LinearLayout
+        android:id="@+id/inputContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/formulaTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp">
+
+        <!-- Поля  -->
+
+        <EditText
+            android:id="@+id/inputA"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:background="@color/white"
+            android:hint="@string/A" />
+
+        <EditText
+            android:id="@+id/inputP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/P"
+            android:visibility="gone"
+            android:background="@color/white"/>
+
+        <EditText
+            android:id="@+id/inputB"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:background="@color/white"
+            android:hint="@string/B" />
+    </LinearLayout>
+
+    <!-- Кнопка "Выполнить расчет" -->
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="184dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/ras"
+        android:background="@color/green"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputContainer" />
+
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/back"
+        android:textColor="@color/green"
+        app:layout_constraintTop_toBottomOf="@+id/calculateButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
